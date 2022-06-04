@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400');
+.float-left {
+float:left;
+width:300px; /* or 33% for equal width independent of parent width*/
+}
+*{
+  font-family: 'Roboto', sans-serif;
+}
+body {
+  background:url('https://unsplash.it/800/1200/?nature');
+  background-size:cover;
+  background-color: gray;
+}
+#generate{
+  font-size: 18px;
+  border: none;
+  padding: 2px 10px 2px 10px;
+  color: white;
+  background-color: rgb(92, 91, 91);
+}
+.contenido {
+  margin: 30px auto;
+  max-height: 430px;
+  max-width: 245px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgb(202, 202, 204);
+  border-radius: 2px;
+}
+.details {
+  box-shadow: 20px 20px 50px #00d2c6, 
+            -30px -30px 60px #00ffff;
+  padding: 26px;
+  background:rgb(210, 210, 210);
+  border-top: 1px dashed #c3c3c3;
+}
+.tinfo {
+  font-size: 0.5em;
+  font-weight: 600;
+  color: #05c13a;
+  font-family: 'Roboto', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin:7px 0;
+}
+
+.tdata {
+  font-size: 0.9em;
+  font-weight: 400;
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: 0.5px;
+  margin:7px 0;
+}
+
+.name {
+  font-size: 1.3em;
+  font-weight: 300;
+}
+
+.link {
+  text-align: center;
+  margin-top:10px;
+}
+
+a {
+  text-decoration: none;
+  color:#55C9E6;  
+  font-weight: 400;
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: 0.7px;
+  font-size: 0.7em;
+}
+.hqr{
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+  margin: 0px auto;
+}
+
+#start1{
+  font-size: 15px;
+}
+#stop1{
+  font-size: 15px;
+}
+  .left-one{
+  background-repeat: no-repeat;
+  background-image: radial-gradient(circle at 0 96% , rgba(0,0,0,0) .2em, gray .3em, white .1em);
+}
+  .right-one{
+  background-repeat: no-repeat;
+  background-image: radial-gradient(circle at 100% 96% , rgba(0,0,0,0) .2em, gray .3em, white .1em);
+}
+.column
+{
+    display: table-cell;
+    padding: 37px 0px;
+}
+.center{
+  background:white;
+}
+
+#qrcode img{
+  height:70px;
+  width:70px;
+  margin: 0 auto;
+}
+.masinfo{
+  display:block;
+}
+.left,.right{
+  width:49%;
+  display:inline-table;
+}
+
+.nesp{
+  letter-spacing: 0px;
+}

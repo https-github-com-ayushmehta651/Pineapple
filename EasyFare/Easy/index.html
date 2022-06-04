@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Easy Fare</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Abel&family=Darker+Grotesque&family=Hind+Madurai:wght@300&family=Montserrat:wght@300&family=Nanum+Gothic&family=Raleway:wght@300&family=Roboto:wght@300&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Abel&family=Darker+Grotesque&family=Hind+Madurai:wght@300&family=Montserrat:wght@300&family=Nanum+Gothic&family=Raleway:wght@300&display=swap" rel="stylesheet">
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="heading">
+        <div id="info"><h1>Easy fare</h1></div>
+        <img id='headImg'src="./imgs/tree.png" alt="">
+    </div>
+    <div id="complete">
+                <div id="box">
+                    <!-- <input type="text" id="from" placeholder="FROM"><br>
+                    <input type="text" id="'to" placeholder="TO"><br> -->
+                    <label for="">FROM</label><br>
+                    <select name="bus" id="start">
+                        <option value="Hebbala Bridge">Hebbala Bridge</option>
+                        <option value="Veeranapalya">Veeranapalya</option>
+                        <option value="Manyatha Tech Park">Manyatha Tech Park</option>
+                        <option value="Junction Of Nagavara">Junction Of Nagavara</option>
+                        <option value="HBR Layout">HBR Layout</option>
+                        <option value="Kalyananagara Bus Station">Kalyananagara Bus Station</option>
+                        <option value="Babusabpalya">Babusabpalya</option>
+                        <option value="Banasawadi">Banasawad</option>
+                        <option value="Vijaya Bank Colony">Vijaya Bank Colony</option>
+                        <option value="Ramamurthy Nagara">Ramamurthy Nagara</option>
+                        <option value="Kasthuri Nagara">Kasthuri Nagara</option>
+                        <option value="Tin Factory">Tin Factory</option>
+                        <option value="K.R.Puram Railway Station">K.R.Puram Railway Station</option>
+                        <option value="B.Narayanapura">B.Narayanapura</option>
+                        <option value="Mahadevapura">Mahadevapura</option>
+                        <option value="Emc 2">Emc 2</option>
+                        <option value="Doddanekkundi">Doddanekkundi</option>
+                        <option value="Rainbow Hospital">Rainbow Hospital</option>
+                        <option value="Karthiknagara">Karthiknagara</option>
+                        <option value="Marathhalli Bridge">Marathhalli Bridge</option>
+                        <option value="Marathahalli Innovative Multiplex">Marathahalli Innovative Multiplex</option>
+                        <option value="Kadubisanahalli">Kadubisanahalli</option>
+                        <option value="New Horizon College">New Horizon College</option>
+                        <option value="Devarabisanahalli">Devarabisanahalli</option>
+                        <option value="Intel Ring Road">Intel Ring Road</option>    
+                        <option value="Cs-Accenture B7 Eco Space">Cs-Accenture B7 Eco Space</option>
+                        <option value="Bellanduru Junction">Bellanduru Junction</option>
+                        <option value="Bellanduru">Bellanduru</option>
+                        <option value="Ibbaluru">Ibbaluru</option>
+                        <option value="Agara Junction">Agara Junction</option>
+                        <option value="H.S.R B.D.A Complex">H.S.R B.D.A Complex</option>
+                        <option value="H.S.R. Layout (S.I. Apartment)">H.S.R. Layout (S.I. Apartment)</option>
+                        <option value="Central Silk Board">Central Silk Board</option>
+                    
+                    </select>
+                    <br><br>
+                    <label for="">TO</label><br>
+                    <select name="car" id="stop">
+                        <option value="Hebbala Bridge">Hebbala Bridge</option>
+                        <option value="Veeranapalya">Veeranapalya</option>
+                        <option value="Manyatha Tech Park">Manyatha Tech Park</option>
+                        <option value="Junction Of Nagavara">Junction Of Nagavara</option>
+                        <option value="HBR Layout">HBR Layout</option>
+                        <option value="Kalyananagara Bus Station">Kalyananagara Bus Station</option>
+                        <option value="Babusabpalya">Babusabpalya</option>
+                        <option value="Banasawadi">Banasawad</option>
+                        <option value="Vijaya Bank Colony">Vijaya Bank Colony</option>
+                        <option value="Ramamurthy Nagara">Ramamurthy Nagara</option>
+                        <option value="Kasthuri Nagara">Kasthuri Nagara</option>
+                        <option value="Tin Factory">Tin Factory</option>
+                        <option value="K.R.Puram Railway Station">K.R.Puram Railway Station</option>
+                        <option value="B.Narayanapura">B.Narayanapura</option>
+                        <option value="Mahadevapura">Mahadevapura</option>
+                        <option value="Emc 2">Emc 2</option>
+                        <option value="Doddanekkundi">Doddanekkundi</option>
+                        <option value="Rainbow Hospital">Rainbow Hospital</option>
+                        <option value="Karthiknagara">Karthiknagara</option>
+                        <option value="Marathhalli Bridge">Marathhalli Bridge</option>
+                        <option value="Marathahalli Innovative Multiplex">Marathahalli Innovative Multiplex</option>
+                        <option value="Kadubisanahalli">Kadubisanahalli</option>
+                        <option value="New Horizon College">New Horizon College</option>
+                        <option value="Devarabisanahalli">Devarabisanahalli</option>
+                        <option value="Intel Ring Road">Intel Ring Road</option>    
+                        <option value="Cs-Accenture B7 Eco Space">Cs-Accenture B7 Eco Space</option>
+                        <option value="Bellanduru Junction">Bellanduru Junction</option>
+                        <option value="Bellanduru">Bellanduru</option>
+                        <option value="Ibbaluru">Ibbaluru</option>
+                        <option value="Agara Junction">Agara Junction</option>
+                        <option value="H.S.R B.D.A Complex">H.S.R B.D.A Complex</option>
+                        <option value="H.S.R. Layout (S.I. Apartment)">H.S.R. Layout (S.I. Apartment)</option>
+                        <option value="Central Silk Board">Central Silk Board</option>
+                        
+
+                    </select>
+                  <br><br>                         <div id="num"><label for="">NUMBER OF PEOPLE</label></div> 
+                                <div id="people">
+                                        <div id="r1">  
+                                            <input type="radio" id="num1" value="1" name="ppl">
+                                            <label for="html">1</label>
+                                        </div>
+
+                                        <div id="r2">  
+                                            <input type="radio" id="num2" value="2" name="ppl">
+                                            <label for="html">2</label>
+                                       </div>
+
+                                       <div id="r3">  
+                                            <input type="radio" id="num3"value="3"name="ppl">
+                                            <label for="html">3</label>
+                                       </div>
+                                
+                                
+                                </div>
+                                <div id="submission" onclick="x()" ><button id="submit"><a href="index1.html">BOOK TICKET</a> </button></div><br>
+                  
+                </div>
+
+            </div>  
+</body>
+</html>
