@@ -5,6 +5,7 @@ function getroutes(source,dest){
     var Spres = [-1,-1];
     var Dpres = [-1,-1];
     var fare = 0;
+    var scount = 0;
     for(let i=0;i<routes.length;i++){
         for(let j=0;j<routes[i].length;j++){
             if(source == routes[i][j]){
@@ -78,5 +79,7 @@ function getroutes(source,dest){
     else   
         console.log("Bus numbers are: " + routes[Spres[0]][0] + " and " + routes[Dpres[0]][0]);
     console.log("Total fare is: " + fare);
+    scount = Number(localStorage.getItem(source+" : "+dest)) + 1;
+    localStorage.setItem(source+" : "+dest,scount);
 }
 getroutes('A', 'B');
