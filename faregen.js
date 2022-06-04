@@ -9,22 +9,22 @@ function getroutes(source,dest){
         for(let j=0;j<routes[i].length;j++){
             if(source == routes[i][j]){
                 Spres = [i,j];
-                break;
+                //break;
             }
         }
         if(Spres[0] != -1 && Dpres[0] != -1){
             for(let j=0;j<routes[i].length;j++){
                 if(dest == routes[i][j]){
                     Dpres = [i,j];
-                    break; 
+                    //break; 
                 }
             if(Dpres[0] != -1){
-                break;
+                //break;
             }
             }
         } 
         else if(Spres[0] != -1 && Dpres[0] == -1){
-            for(let j = 0; j < routes.length && j!=i;j++){
+            for(let j = 0; j < routes.length;j++){
                 for(let k = 0;k<routes[j].length;k++){
                     if(dest == routes[j][k])
                         Dpres = [j,k];
@@ -32,15 +32,19 @@ function getroutes(source,dest){
             }
         }
         else{
-            continue;
+
         }
     }
+    console.log(Spres + " : " + Dpres);
     if(Spres[0] == -1 || Dpres[0]==-1){
         console.log("Not found");
     }
     else if(Spres[0] == Dpres[0]){
         distance.push(Math.abs(dis[Dpres[0]][Dpres[1]] - dis[Spres[0]][Spres[1]]));
-        fare += parseInt(Math.abs(dis[Dpres[0]][Dpres[1]] - dis[Spres[0]][Spres[1]]) / parseInt((dis[Spres[0]][dis[Spres[0]].length-1] - dis[Spres[0]][1]) /6)+1)*5 ;
+        if(dis[Spres[0]].length < 6)
+            fare+=5;
+        else
+            fare += parseInt(Math.abs(dis[Dpres[0]][Dpres[1]] - dis[Spres[0]][Spres[1]]) / parseInt((dis[Spres[0]][dis[Spres[0]].length-1] - dis[Spres[0]][1]) /6)+1)*5 ;
     }
     else if(Spres[0] != Dpres[0]){
         var common = [];
@@ -75,4 +79,4 @@ function getroutes(source,dest){
         console.log("Bus numbers are: " + routes[Spres[0]][0] + " and " + routes[Dpres[0]][0]);
     console.log("Total fare is: " + fare);
 }
-getroutes('A', 'Hebbala Bridge');
+getroutes('A', 'B');
