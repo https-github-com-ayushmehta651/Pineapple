@@ -31,13 +31,15 @@ function c(){
     var c3 = Number(sessionStorage.getItem('fare'))
     c4= Number(sessionStorage.getItem('ppl'));
     c3 = c3*c4;
-
+    var c5 = sessionStorage.getItem('bus');
     console.log(c1);
     console.log(c2); 
     document.getElementById('pno').innerText=c4
     document.getElementById('fare').innerText=c3//total
     document.getElementById('start1').innerText=c1//from
     document.getElementById('stop1').innerText=c2 //to
+    document.getElementById('routeno').innerText=c5 //route numbers
+
 }
 
    
@@ -100,9 +102,11 @@ function getroutes(source,dest){
             }
         }
         var min_dist = 10000;
+        var min_loc = '';
         for(let i = 0; i<common.length;i++){
             //console.log(((Math.abs(dis[Spres[0]][routes[Spres[0]].indexOf(common[i])] - dis[Spres[0]][Spres[1]])) + Math.abs(dis[Dpres[0]][routes[Dpres[0]].indexOf(common[i])] - dis[Dpres[0]][Dpres[1]])));
             if(((Math.abs(dis[Spres[0]][routes[Spres[0]].indexOf(common[i])] - dis[Spres[0]][Spres[1]])) + Math.abs(dis[Dpres[0]][routes[Dpres[0]].indexOf(common[i])] - dis[Dpres[0]][Dpres[1]])) < min_dist){
+                min_loc = common[i];
                 min_dist = ((Math.abs(dis[Spres[0]][routes[Spres[0]].indexOf(common[i])] - dis[Spres[0]][Spres[1]])) + Math.abs(dis[Dpres[0]][routes[Dpres[0]].indexOf(common[i])] - dis[Dpres[0]][Dpres[1]]));
                 if(dis[Spres[0]].length > 6)
                     fare += dis[Spres[0]][routes[Spres[0]].indexOf(common[i])] / (dis[Spres[0]][(dis[Spres[0]].length)-1]/6) * 5;
@@ -125,4 +129,8 @@ function getroutes(source,dest){
     scount = Number(localStorage.getItem(source+" : "+dest)) + 1;
     localStorage.setItem(source+" : "+dest,scount);
     sessionStorage.setItem('fare',fare);
+    if(Spres[0] == Dpres[0])
+        sessionStorage.setItem('bus',routes[Spres[0]][0]);
+    else
+        sessionStorage.setItem('bus',routes[Spres[0]][0] + " and " + routes[Dpres[0]][0] + " switch at " + min_loc);
 }

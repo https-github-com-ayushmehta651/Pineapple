@@ -23,8 +23,10 @@ body{
 #box{
     border-radius: 15px;
     padding:10px ;
-    margin:0 auto;
+    margin:30px auto;
     width:50%;
+    box-shadow: 20px 20px 50px #00d27e, 
+            -30px -30px 60px #01c580;
     background-image: linear-gradient(45deg,rgba(253, 253, 253, 0.5),rgb(206, 206, 206,0));
    
 }
@@ -126,6 +128,17 @@ button:hover>a{
     }
     h1{
        font-size: 22px;
+       
+   }
+   #start{
+       font-size: 12px;
+   }
+   #stop{
+       font-size: 12px;
+   }
+   select>option{
+       font-size: 12px;
+       line-height: 15px;
        
    }
    #people{
