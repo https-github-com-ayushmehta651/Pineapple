@@ -44,6 +44,13 @@ function c(){
 
    
 function getroutes(source,dest){
+    if(source == dest){
+        sessionStorage.setItem('fare',0);
+        distance = 0;
+        sessionStorage.setItem('bus',"You can't take a bus to the same place");
+        return;
+
+    }
     var routes = [['500D','Hebbala Bridge', 'Kempapura', 'Veeranapalya', 'Manyatha Tech Park', 'Junction Of Nagavara', 'HBR Layout', 'Kalyananagara Bus Station', 'Babusabpalya', 'Banasawadi', 'Vijaya Bank Colony', 'Ramamurthy Nagara', 'Kasthuri Nagara', 'Tin Factory', 'K.R.Puram Railway Station', 'B.Narayanapura', 'Mahadevapura', 'Emc 2', 'Doddanekkundi', 'Rainbow Hospital', 'Karthiknagara', 'Marathhalli Bridge','Marathahalli Innovative Multiplex', 'Kadubisanahalli', 'New Horizon College', 'Devarabisanahalli', 'Intel Ring Road', 'Cs-Accenture B7 Eco Space', 'Bellanduru Junction', 'Bellanduru', 'Ibbaluru', 'Agara Junction', 'H.S.R B.D.A Complex', 'H.S.R. Layout (S.I. Apartment)', 'Central Silk Board'],['600A','A','B','Central Silk Board']];
     var dis = [['500D',0,0.4,1.5,2.3,2.8,3.5,5.3,5.6,6.9,8.0,9.1,10.4,10.9,11.6,12,13,14,15.2,15.5,16,17,18.5,20,21,21.8,22.3,23,23.5,23.8,24.5,26,28,29,30.6],['600A',0,1,1.5]];
     var distance = [];
